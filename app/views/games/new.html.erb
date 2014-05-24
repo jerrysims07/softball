@@ -1,0 +1,8 @@
+<%= form_for @game do |f| %>
+  <%= f.label :home_team %>:
+  <%= f.select :home_team_id, options_for_select(@teams.map{ |m| [m.name]}) %><br>
+  <%= f.label :away_team %>:
+<%= f.select :away_team_id, options_for_select(@teams.map{ |m| [m.name]}) %>
+
+  <%= f.submit %>
+<% end %>
