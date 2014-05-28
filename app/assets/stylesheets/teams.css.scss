@@ -1,3 +1,28 @@
 // Place all the styles related to the Teams controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  font-family: trebuchetMS;
+}
+
+tr > td:first-child {
+  padding-right: 20px;
+}
+
+tr > td {
+  width: 25px;
+}
+
+thead {
+  background-color: #bbbbbb;
+}
+
+thead td {
+  color: black;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+table {
+  border: 1px solid gray;
+}
