@@ -1,12 +1,20 @@
-<table>
-  <% @scores.each do |score| %>
-    <tr>
-      <td><%= score.away_team.abbr %></td>
-      <td><%= score.away_team_runs %></td>
-    </tr>
-    <tr>
-      <td><%= score.home_team.abbr %></td>
-      <td><%= score.home_team_runs %></td>
-    </tr>
-  <%end %>
-</table>
+<div id="scores">
+  <h1>Results</h1>
+    <% @scores.each do |score| %>
+      <div class="one-game">
+        <table>
+          <tr>
+            <th><%= score.date.strftime("%m-%d-%Y") %></th>
+          </tr>
+          <tr>
+            <td><%= score.away_team.abbr %></td>
+            <td><%= score.away_team_runs %></td>
+          </tr>
+          <tr>
+            <td><%= score.home_team.abbr %></td>
+            <td><%= score.home_team_runs %></td>
+          </tr>
+        </table>
+      </div>
+    <%end %>
+</div>

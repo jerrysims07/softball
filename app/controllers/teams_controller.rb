@@ -8,6 +8,12 @@ class TeamsController < ApplicationController
     @scores = Game.where.not(away_team_runs: nil)
 
     @upcoming_games = Game.where(away_team_runs: nil)
+
+    @dates = []
+    @upcoming_games.each do |g|
+      @dates << g.date
+    end
+    @dates.uniq!
   end
 
 end

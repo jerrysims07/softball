@@ -1,21 +1,23 @@
-<table>
-  <thead>
-    <div class='table_head'>
-    <tr>
-      <td>Team</td>
-      <td>W</td>
-      <td>L</td>
-      <td>T</td>
-      <td>Pct.</td>
-    </tr>
-  </thead>
-  <% @teams.each do |team| %>
-    <tr>
-      <td><%= team.abbr %></td>
-      <td><%= team.wins %></td>
-      <td><%= team.losses %></td>
-      <td><%= team.ties %></td>
-      <td><%= number_with_precision(team.pct, :precision => 3)%></td>
-    </tr>
-  <%end %>
-</table>
+<div id="standings">
+  <h1>Standings</h1>
+  <table>
+    <thead>
+      <tr>
+        <td>Team</td>
+        <td>W</td>
+        <td>L</td>
+        <td>T</td>
+        <td>Pct.</td>
+      </tr>
+    </thead>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= team.abbr %></td>
+        <td><%= team.wins %></td>
+        <td><%= team.losses %></td>
+        <td><%= team.ties %></td>
+        <td><%= number_with_precision(team.pct, :precision => 3)%></td>
+      </tr>
+    <%end %>
+  </table>
+</div>
