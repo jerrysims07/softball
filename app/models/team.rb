@@ -14,7 +14,7 @@ class Team < ActiveRecord::Base
   end
 
   def ties
-    Game.where("(home_team_id = ? OR away_team_id = ?) AND home_team_runs == away_team_runs", id, id).count
+    Game.where("(home_team_id = ? OR away_team_id = ?) AND home_team_runs = away_team_runs", id, id).count
   end
 
   def pct
