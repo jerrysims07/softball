@@ -16,7 +16,7 @@
         <td><%= team.wins %></td>
         <td><%= team.losses %></td>
         <td><%= team.ties %></td>
-        <td><%= number_with_precision(team.pct, :precision => 3)%></td>
+        <td><%= number_with_precision(team.pct, :precision => 3).gsub("0.",".")%></td>
       </tr>
     <%end %>
   </table>

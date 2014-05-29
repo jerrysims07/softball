@@ -1,0 +1,8 @@
+<div id="legend">
+  <h1>Legend</h1>
+  <ul id="team-list">
+    <% @teams.each do |team| %>
+      <li><span><%= team.abbr %></span><span>...</span><%= team.name %></li>
+    <% end %>
+  </ul>
+</div>

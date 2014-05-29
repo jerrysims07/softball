@@ -28,6 +28,10 @@
   }
 }
 
+#legend {
+  float:left;
+}
+
 .one-game{
   margin: 3px;
   float: left;
@@ -50,6 +54,15 @@
 // #scores th {
 //   colspan: 2;
 // }
+
+#team-list {
+  padding: 0px;  
+  list-style-type: none;
+  span{
+  width: 40px;
+  float: left;
+  }
+}
 
 tr > td:first-child {
   padding-right: 20px;
