@@ -1,5 +1,14 @@
 require 'csv'
 
+csv_file_path = 'data/teams.csv'
+
+CSV.foreach(csv_file_path) do |row|
+  Team.create!({
+    :name => row[0],
+    :abbr => row[1]
+  })
+end
+
 csv_file_path = 'data/schedule.csv'
 
 CSV.foreach(csv_file_path) do |row|
