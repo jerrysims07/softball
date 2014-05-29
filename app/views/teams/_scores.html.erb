@@ -1,0 +1,12 @@
+<table>
+  <% @scores.each do |score| %>
+    <tr>
+      <td><%= score.away_team.abbr %></td>
+      <td><%= score.away_team_runs %></td>
+    </tr>
+    <tr>
+      <td><%= score.home_team.abbr %></td>
+      <td><%= score.home_team_runs %></td>
+    </tr>
+  <%end %>
+</table>
