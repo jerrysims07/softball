@@ -20,7 +20,28 @@ class GamesController < ApplicationController
     end
   end
 
+  def edit
+    @game = Game.find(params[:id])
+  end
+
   def list game
     @games = Game.all
   end
+
+  def show
+    @game = Game.find(params[:id])
+  end
+
+  def update
+    @game = Game.find(params[:id])
+    @game.away_team_runs = params[:game][:away_team_runs]
+    @game.home_team_runs = params[:game][:home_team_runs]
+
+    if @game.save
+      redirect_to standings_path
+    else
+      redirect_to back
+    end
+  end
+
 end

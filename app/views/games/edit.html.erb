@@ -1,0 +1,10 @@
+<div class='edit-game'>
+  <%= form_for @game do |f| %>
+  <%= f.label :away_team_runs, @game.away_team.abbr %>:
+  <%= f.select(:away_team_runs, (0..40)) %><br />
+
+  <%= f.label :home_team_runs, @game.home_team.abbr %>:
+  <%= f.select(:home_team_runs, (0..40)) %><br />
+
+  <%= f.submit %>
+<% end %>
