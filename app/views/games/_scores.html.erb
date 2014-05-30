@@ -1,0 +1,22 @@
+<div id="scores">
+  <h1>Results</h1>
+    <% @scores.each do |score| %>
+      <div class="one-game">
+        <a class="score-links" data-id=<%=score.id %> href='#'>
+          <table>
+            <tr>
+              <th><%= score.date.strftime("%m-%d-%Y") %></th>
+            </tr>
+            <tr>
+              <td><%= score.away_team.abbr %></td>
+              <td><%= score.away_team_runs %></td>
+            </tr>
+            <tr>
+              <td><%= score.home_team.abbr %></td>
+              <td><%= score.home_team_runs %></td>
+            </tr>
+          </table>
+        </a>
+      </div>
+    <%end %>
+</div>
