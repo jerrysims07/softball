@@ -5,8 +5,19 @@
   font-family: trebuchetMS;
 }
 
-#wrapper{
-  width: 100%;
+#wrapper, #image-wrapper{
+  width: 1445px;
+  height: 1216px;
+  margin: auto;
+}
+
+#image-wrapper {
+  background-image: url('softball.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none;
 }
 
 #standings{
@@ -56,7 +67,7 @@
 // }
 
 #team-list {
-  padding: 0px;  
+  padding: 0px;
   list-style-type: none;
   span{
   width: 40px;

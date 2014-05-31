@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render '/layouts/nav' %>
   <div id="wrapper">
-    <%= yield %>
+    <div id="content">
+      <%= yield %>
+    </div>
+    <div id="image-wrapper">
+    </div>
   </div>
 </body>
 </html>

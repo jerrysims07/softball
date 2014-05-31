@@ -1,5 +1,6 @@
 <div id="schedule">
   <h1>Upcoming Schedule</h1>
+    <div>Click game to enter score</div><br>
     <% @dates.each do |d| %>
       <% todays_games = [] %>
       <% todays_games = @upcoming_games.select{ |g| g.date == d} %>

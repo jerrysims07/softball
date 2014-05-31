@@ -1,8 +1,9 @@
 <div id="scores">
   <h1>Results</h1>
+    <div>(click game to edit score)</div>
     <% @scores.each do |score| %>
       <div class="one-game">
-        <%= link_to(score) do %>
+        <%= link_to edit_game_path(score) do %>
           <table>
             <tr>
               <th><%= score.date.strftime("%m-%d-%Y") %></th>
