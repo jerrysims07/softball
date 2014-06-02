@@ -9,6 +9,13 @@
   width: 1445px;
   height: 1216px;
   margin: auto;
+  background-color: rgba(0,110,220,1);
+}
+
+.content-section{
+  background-color: rgba(255,255,255, 0.7);
+  margin: 5px;
+  padding: 5px;
 }
 
 #image-wrapper {
@@ -26,10 +33,11 @@
 }
 
 #standings{
-  width: 20%;
+  width: 30%;
   margin-right: 0px;
   text-align: center;
   float: left;
+  height: 320px;
 }
 
 #standings table{
@@ -48,14 +56,16 @@
 
 #scores{
   float: left;
-  width: 100%;
+  width: 96.5%;
   th{
     colspan: 2;
   }
 }
 
 #legend {
+  width: 63%;
   float:left;
+  height: 320px;
 }
 
 .one-game{
@@ -106,8 +116,8 @@ tr > td {
   width: auto;
 }
 
-thead {
-  background-color: #bbbbbb;
+.content-section{
+
 }
 
 thead td {

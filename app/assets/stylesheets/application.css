@@ -13,10 +13,19 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/css?family=Playball);
+#main-title{
+  vertical-align:absbottom;
+  display:inline;
+}
+
+.fancy{
+  font-family: 'Playball', cursive;
+}
 
 #nav-bar{
   text-align: center;
-  background-color: #bbbbbb;
+  /*background-color: #bbbbbb;*/
 }
 
 #center-bar{

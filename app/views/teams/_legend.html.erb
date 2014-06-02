@@ -1,7 +1,7 @@
-<div id="legend">
-  <h1>Legend</h1>
+<div id="legend" class="content-section">
+  <h2>Legend</h2>
   <ul id="team-list">
-    <% @teams.each do |team| %>
+    <% @teams.sort_by(&:name).each do |team| %>
       <li><span><%= team.abbr %></span><span>...</span><%= team.name %></li>
     <% end %>
   </ul>
