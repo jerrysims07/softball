@@ -1,5 +1,7 @@
 class GamesController < ApplicationController
 
+  http_basic_authenticate_with :name => "commish", :password => "softball" 
+
   def index
     @games = Game.all
   end
