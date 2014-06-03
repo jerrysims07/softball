@@ -21,6 +21,8 @@
 
 .fancy{
   font-family: 'Playball', cursive;
+  font-size: 250%;
+  font-weight: bold;
 }
 
 #nav-bar{
