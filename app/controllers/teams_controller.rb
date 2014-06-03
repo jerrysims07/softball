@@ -7,7 +7,8 @@ class TeamsController < ApplicationController
     # @teams = @teams.sort {|a, b| a.pct <=> b.pct}
     @teams.reverse!
 
-    @scores = Game.where.not(away_team_runs: nil)
+    @scores = Game.where.not(away_team_runs: nil).sort_by(&:date)
+
 
     @upcoming_games = Game.where(away_team_runs: nil)
 

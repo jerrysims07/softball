@@ -73,6 +73,7 @@
   float: left;
   width: 23%;
   border: 2px solid gray;
+  background-color: rgba(255,255,255,.8);
 }
 
 .one-game:hover{
@@ -81,6 +82,12 @@
 
 .one-upcoming{
   padding-right: 20px;
+  background-color: rgba(255,255,255,.8);
+  border: 2px solid gray;
+}
+
+.one-upcoming:hover{
+  border: 2px solid red;
 }
 
 .one-game table{
