@@ -81,14 +81,23 @@
 }
 
 .one-upcoming{
-  padding-right: 20px;
+  // padding-right: 20px;
   background-color: rgba(255,255,255,.8);
   border: 2px solid gray;
+}
+
+#schedule th{
+  text-align: left;
 }
 
 .one-upcoming:hover{
   border: 2px solid red;
 }
+
+// #softball-image{
+//   width: 100%;
+//   background-image: url('softball-transparent.png');
+// }
 
 .one-game table{
   width: 95%;
@@ -101,10 +110,10 @@
     text-decoration: none;
   }
 }
-//
-// #scores th {
-//   colspan: 2;
-// }
+
+#schedule td {
+  width: 65px;
+}
 
 #team-list {
   padding: 0px;
@@ -116,7 +125,7 @@
 }
 
 tr > td:first-child {
-  padding-right: 20px;
+  // padding-right: 20px;
 }
 
 tr > td {

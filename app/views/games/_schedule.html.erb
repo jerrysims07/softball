@@ -1,22 +1,28 @@
 <div id="schedule" class="content-section">
   <h2>Upcoming Schedule</h2>
-    <div>(click game to enter score)</div><br>
-    <% @dates.each do |d| %>
-      <% todays_games = [] %>
+  <div>(click game to enter score)</div><br>
+  <% @dates.each do |d| %>
+    <% todays_games = [] %>
+    <table>
       <% todays_games = @upcoming_games.select{ |g| g.date == d} %>
-      <table>
-        <tr><%= d.strftime("%m-%d-%Y") %></tr>
+        <thead><%= d.strftime("%m-%d-%Y") %></thead>
         <tr class="one-days-games">
           <% todays_games.each do |tg| %>
             <td class="one-upcoming">
               <%= link_to edit_game_path(tg) do %>
-                <%= tg.away_team.abbr %><br>
-                <%= tg.home_team.abbr %>
+                <table>
+                  <tr>
+                    <td><%= tg.away_team.abbr %></td>
+                  </tr>
+                  <tr>
+                    <td><%= tg.home_team.abbr %></td>
+                  </tr>
+                </table>
               <% end %>
             </td>
           <% end %>
         </tr>
-      </table>
-    <%end %>
-  </table>
+      <%end %>
+    </table>
+  </end>
 </div>
