@@ -2,7 +2,10 @@
   <h2>Legend</h2>
   <ul id="team-list">
     <% @teams.sort_by(&:name).each do |team| %>
-      <li><span><%= team.abbr %></span><span>...</span><%= team.name %></li>
+      <div class = "individual-team">
+        <!-- <a href = "#"><li><span><%= team.abbr %></span><span>...</span><%= team.name %></li></a> -->
+        <%= link_to team.abbr, team_path(team) %>...<%= link_to team.name, team_path(team) %>
+      </div>
     <% end %>
   </ul>
 </div>

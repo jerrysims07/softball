@@ -19,4 +19,8 @@ class TeamsController < ApplicationController
     @dates.uniq!
   end
 
+  def show
+    @team = Team.find(params[:id])
+  end
+
 end
