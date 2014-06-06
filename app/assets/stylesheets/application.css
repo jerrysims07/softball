@@ -19,7 +19,11 @@
   display:inline;
 }
 
-.fancy{
+#main-title a {
+  text-decoration: none;
+}
+
+.fancy a {
   font-family: 'Playball', cursive;
   font-size: 250%;
   font-weight: bold;
