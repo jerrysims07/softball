@@ -13,7 +13,7 @@
 }
 
 .content-section{
-  background-color: rgba(255,255,255, 0.7);
+  background-color: rgba(255,255,255, 0.9);
   margin: 5px;
   padding: 5px;
 }
@@ -78,7 +78,7 @@
 
 .one-game:hover{
   border: 2px solid red;
-  background-color: rgba(255, 255, 255,.6);
+  background-color: rgba(255, 255, 255,1);
 }
 
 .one-upcoming{
@@ -93,7 +93,7 @@
 
 .one-upcoming:hover{
 border: 2px solid red;
-background-color: rgba(255, 255, 255,.6);
+background-color: rgba(255, 255, 255,1);
 }
 
 // #softball-image{
@@ -148,10 +148,6 @@ tr > td {
   width: auto;
 }
 
-.content-section{
-
-}
-
 thead td {
   color: black;
   font-weight: bolder;
@@ -169,7 +165,7 @@ table {
 #one-teams-games{
   width: 30%;
   margin: auto;
-  background-color: rgba(255,255,255,.6);
+  background-color: rgba(255,255,255,.8);
 }
 
 #one-teams-games table{
@@ -184,7 +180,7 @@ table {
     text-align: center;
   }
   td{
-    background-color: rgba(255,255,255,.6);
+    background-color: rgba(255,255,255,.8);
   }
 }
 

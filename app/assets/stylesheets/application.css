@@ -19,6 +19,13 @@
   display:inline;
 }
 
+#wrapper{
+  background-image: url(baseball-field.jpg);
+  background-repeat: no-repeat;
+  background-size: 128%;
+  background-position: center;
+}
+
 #main-title a {
   text-decoration: none;
 }
@@ -30,10 +37,12 @@
 }
 
 #nav-bar{
+  width: 75%;
+  margin: auto;
   text-align: center;
   margin-bottom: 30px;
   padding-top: 20px;
-  /*background-color: #bbbbbb;*/
+  background-color: rgba(255,255,255,.8)
 }
 
 #center-bar{
