@@ -7,7 +7,7 @@
    )
 </h1>
 </h1>
-<div id="one-teams-games">
+<div id="one-teams-games" class="content-section">
   <table>
     <% @team.games.each do |game| %>
       <tr>
@@ -19,7 +19,7 @@
   </table>
 </div>
 
-<div id="one-teams-stats">
+<div id="one-teams-stats" class="content-section">
   <table>
     <tr><th><h2>Runs Scored</h2></th><th><h2>Runs Allowed</h2></th></tr>
     <tr><td><h1><%= @team.runs_for %></h1></td><td><h1><%= @team.runs_allowed %></h1></td>
