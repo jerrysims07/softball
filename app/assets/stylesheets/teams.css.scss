@@ -30,7 +30,7 @@
 }
 
 #content {
-  width: 60%;
+  width: 58%;
   margin: auto;
 }
 
@@ -73,7 +73,7 @@
 .one-game{
   margin: 3px;
   float: left;
-  width: 23%;
+  width: 95%;
   border: 2px solid gray;
   background-color: rgba(255,255,255,.8);
 }
@@ -106,6 +106,16 @@ background-color: rgba(255, 255, 255,1);
 .one-game table{
   width: 95%;
   margin: auto;
+}
+
+.one-days-games{
+  width: 100%;
+}
+
+.one-days-games tr{
+  td{
+    width: 32px;
+  }
 }
 
 #schedule{
@@ -145,10 +155,10 @@ tr > td:first-child {
 a{
   color: inherit;
 }
-
-tr > td {
-  width: auto;
-}
+//
+// tr > td {
+//   width: 32%;
+// }
 
 thead td {
   color: black;

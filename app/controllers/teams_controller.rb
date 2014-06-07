@@ -8,7 +8,11 @@ class TeamsController < ApplicationController
     @teams.reverse!
 
     @scores = Game.where.not(away_team_runs: nil).sort_by(&:date)
-
+    @past_dates = []
+    @scores.each do |s|
+      @past_dates << s.date
+    end
+    @past_dates.uniq!
 
     @upcoming_games = Game.where(away_team_runs: nil)
 
