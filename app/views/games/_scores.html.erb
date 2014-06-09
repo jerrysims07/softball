@@ -3,12 +3,12 @@
   <div>(click game to edit score)</div><br>
     <% one_days_score = [] %>
     <% @past_dates.each do |pd| %>
-      <table class="one-days-games">
+      <% one_days_score = @scores.select{ |g| g.date == pd} %>
+      <table class="one-days-games size-<%=one_days_score.count%>">
         <th colspan=3>
           <%= pd.strftime("%m-%d-%Y") %>
         </th>
         <tr>
-          <% one_days_score = @scores.select{ |g| g.date == pd} %>
           <% one_days_score.each do |score| %>
             <td>
               <div class="one-game">

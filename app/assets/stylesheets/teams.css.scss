@@ -74,17 +74,13 @@
   margin: 3px;
   float: left;
   width: 95%;
-  border: 2px solid gray;
-  background-color: rgba(255,255,255,.8);
 }
 
 .one-game:hover{
-  border: 2px solid red;
   background-color: rgba(255, 255, 255,1);
 }
 
 .one-upcoming{
-  // padding-right: 20px;
   background-color: rgba(255,255,255,.8);
   border: 2px solid gray;
 }
@@ -98,18 +94,16 @@ border: 2px solid red;
 background-color: rgba(255, 255, 255,1);
 }
 
-// #softball-image{
-//   width: 100%;
-//   background-image: url('softball-transparent.png');
-// }
-
 .one-game table{
   width: 95%;
   margin: auto;
 }
 
-.one-days-games{
-  width: 100%;
+#scores .one-days-games{
+  width: 48%;
+  float:left;
+  border: 1px solid gray;
+  margin: 3px;
 }
 
 .one-days-games tr{
@@ -148,26 +142,14 @@ a:visited{
   color: inherit;
 }
 
-tr > td:first-child {
-  // padding-right: 20px;
-}
-
 a{
   color: inherit;
 }
-//
-// tr > td {
-//   width: 32%;
-// }
 
 thead td {
   color: black;
   font-weight: bolder;
   font-style: italic;
-}
-
-table {
-  // border: 1px solid gray;
 }
 
 .date-column{
