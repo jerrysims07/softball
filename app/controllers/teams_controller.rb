@@ -2,7 +2,6 @@ class TeamsController < ApplicationController
 
   def index
     @teams = Team.all.sort_by(&:pct)
-    # @teams = @teams.sort {|a, b| a.pct <=> b.pct}
     @teams.reverse!
 
     @scores = Game.where.not(away_team_runs: nil).sort_by(&:date)

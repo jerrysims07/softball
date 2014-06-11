@@ -22,7 +22,7 @@
 <div id="one-teams-stats" class="content-section">
   <table>
     <tr><th><h2>Runs Scored</h2></th><th><h2>Runs Allowed</h2></th></tr>
-    <tr><td><h1><%= @team.runs_for %></h1></td><td><h1><%= @team.runs_allowed %></h1></td>
-    <tr><td>ave: <%= @team.runs_for/@team.games_played %></td><td>ave: <%= @team.runs_allowed/@team.games_played %></td>
+    <tr><td><h1><%= @team.runs[:for] %></h1></td><td><h1><%= @team.runs[:allowed] %></h1></td>
+    <tr><td>ave: <%= @team.runs[:for]/@team.games_played %></td><td>ave: <%= @team.runs[:allowed]/@team.games_played %></td>
   </table>
 </div>
