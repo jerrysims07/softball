@@ -26,3 +26,9 @@
     <tr><td>ave: <%= @team.runs[:for]/@team.games_played %></td><td>ave: <%= @team.runs[:allowed]/@team.games_played %></td>
   </table>
 </div>
+<div id="teams-menu">
+  <%= form_for :team, url: team_path, html: {method: "get"} do |f| %>
+    <%= f.select(:name, @teams.map {|t| t.name}) %>
+    <%= f.submit "Change Team" %>
+  <% end %>
+</div>

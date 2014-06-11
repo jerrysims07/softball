@@ -21,7 +21,8 @@ class TeamsController < ApplicationController
   end
 
   def show
-    @team = Team.find(params[:id])
+    @teams = Team.all.sort_by(&:name)
+    @team = params[:team] ? Team.find_by(name: params[:team][:name]) : Team.find(params[:id])
   end
 
 end
