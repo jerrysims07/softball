@@ -1,9 +1,7 @@
 class TeamsController < ApplicationController
 
   def index
-    @teams = Team.all
-
-    @teams = @teams.sort_by(&:pct)
+    @teams = Team.all.sort_by(&:pct)
     # @teams = @teams.sort {|a, b| a.pct <=> b.pct}
     @teams.reverse!
 
