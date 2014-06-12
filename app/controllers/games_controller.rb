@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
 
-  http_basic_authenticate_with :name => "commish", :password => "softball" 
+  http_basic_authenticate_with :name => "commish", :password => "softball"
 
   def index
     @games = Game.all
@@ -36,8 +36,10 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
-    @game.away_team_runs = params[:game][:away_team_runs]
-    @game.home_team_runs = params[:game][:home_team_runs]
+    @game.away_team_runs = params[:game][:away_team_runs] == "" ? nil : params[:game][:away_team_runs]
+    @game.home_team_runs = params[:game][:home_team_runs] == "" ? nil : params[:game][:home_team_runs]
+    @game.date = params[:game]["date(1i)"] + "-" + params[:game]["date(2i)"] + "-" + params[:game]["date(3i)"]
+
 
     if @game.save
       redirect_to standings_path

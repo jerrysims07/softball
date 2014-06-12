@@ -1,10 +1,15 @@
-<div class='edit-game'>
-  <%= form_for @game do |f| %>
-  <%= f.label :away_team_runs, @game.away_team.abbr %>:
-  <%= f.select(:away_team_runs, (0..40)) %><br />
+<div class='content-section'>
+  <div class = 'edit-game'>
+    <%= form_for @game do |f| %>
+    <%= f.datetime_select :date,  :order => [:month, :day, :year], :discard_year => true,
+                                  :ampm => true, :minute_step => 5, :start_hour => 18, :end_hour => 21 %><br>
+    <%= f.label :away_team_runs, @game.away_team.abbr %>:
+    <%= f.select(:away_team_runs, (0..40), :include_blank => true) %><br />
 
-  <%= f.label :home_team_runs, @game.home_team.abbr %>:
-  <%= f.select(:home_team_runs, (0..40)) %><br />
+    <%= f.label :home_team_runs, @game.home_team.abbr %>:
+    <%= f.select(:home_team_runs, (0..40), :include_blank => true) %><br />
 
-  <%= f.submit %>
+    <%= f.submit "Update Game"%>
+  </div>
 <% end %>
+</div>
