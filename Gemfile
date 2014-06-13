@@ -28,7 +28,8 @@ gem 'spring',        group: :development
 gem 'minitest'
 
 group :development, :test do
-  gem 'rspec-rails', '2.13.1'
+  gem 'rspec-rails', '<2.99'
+  gem 'rspec', '< 2.99'
   gem 'sqlite3'
 end
 
