@@ -4,7 +4,7 @@
   <% @dates.each do |d| %>
     <% todays_games = [] %>
     <table>
-      <% todays_games = @upcoming_games.select{ |g| g.date == d} %>
+      <% todays_games = @upcoming_games.select{ |g| g.date.strftime("%m%d%Y") == d.strftime("%m%d%Y")} %>
         <thead><%= d.strftime("%m-%d-%Y") %></thead>
         <tr class="one-days-games">
           <% todays_games.each do |tg| %>

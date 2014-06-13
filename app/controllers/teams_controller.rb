@@ -15,7 +15,7 @@ class TeamsController < ApplicationController
 
     @dates = []
     @upcoming_games.each do |g|
-      @dates << g.date
+      @dates << g.date.beginning_of_day
     end
     @dates.uniq!
   end
