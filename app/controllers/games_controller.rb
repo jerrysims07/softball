@@ -38,7 +38,7 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     @game.away_team_runs = params[:game][:away_team_runs] == "" ? nil : params[:game][:away_team_runs]
     @game.home_team_runs = params[:game][:home_team_runs] == "" ? nil : params[:game][:home_team_runs]
-    @game.date = params[:game]["date(1i)"] + "-" + params[:game]["date(2i)"] + "-" + params[:game]["date(3i)"]
+    @game.date =  params[:game]["date(1i)"] + "-" + params[:game]["date(2i)"] + "-" + params[:game]["date(3i)"] + " " + params[:game]["date(4i)"] + ":" + params[:game]["date(5i)"] + ":00"
 
 
     if @game.save

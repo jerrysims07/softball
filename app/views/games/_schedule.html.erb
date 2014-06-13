@@ -12,6 +12,8 @@
               <%= link_to edit_game_path(tg) do %>
                 <table>
                   <tr>
+                    <td class = "time"><%= tg.date.strftime("%l:%M %p") %></td>
+                  <tr>
                     <td><%= tg.away_team.abbr %></td>
                   </tr>
                   <tr>
