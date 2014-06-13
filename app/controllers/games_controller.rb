@@ -37,11 +37,10 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
-    d = process_date_params params
+    game_params = params.require(:game).permit(:date, :away_team_runs, :home_team_runs)
+    @game.assign_attributes game_params
     @game.away_team_runs = params[:game][:away_team_runs] == "" ? nil : params[:game][:away_team_runs]
     @game.home_team_runs = params[:game][:home_team_runs] == "" ? nil : params[:game][:home_team_runs]
-    @game.date =  d[:year] + "-" + d[:month] + "-" + d[:day] + " " + d[:hour] + ":" + d[:minute] + ":00"
-
 
     if @game.save
       redirect_to standings_path
