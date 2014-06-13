@@ -1,0 +1,292 @@
+/* line 5, /Users/jerry/Code/softball/app/assets/stylesheets/games.css.scss */
+a.score-links {
+  color: black;
+}
+
+/* line 9, /Users/jerry/Code/softball/app/assets/stylesheets/games.css.scss */
+.edit-game form {
+  width: 40%;
+  margin: auto;
+}
+
+/* line 14, /Users/jerry/Code/softball/app/assets/stylesheets/games.css.scss */
+.time {
+  font-size: smaller;
+  background-color: rgba(127, 127, 127, 0.3);
+}
+/* line 4, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+body {
+  font-family: trebuchetMS;
+}
+
+/* line 8, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#wrapper, #image-wrapper {
+  width: 1445px;
+  height: 1216px;
+  margin: auto;
+  background-color: #006edc;
+}
+
+/* line 15, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+.content-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+/* line 23, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#image-wrapper {
+  background-image: url("softball.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* line 32, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#content {
+  width: 58%;
+  margin: auto;
+}
+
+/* line 37, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#standings {
+  width: 30%;
+  margin-right: 0px;
+  text-align: center;
+  float: left;
+  height: 320px;
+}
+
+/* line 45, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#standings table {
+  margin: auto;
+}
+
+/* line 49, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+.content-main {
+  width: 67%;
+  float: left;
+}
+
+/* line 54, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+.content-sidebar {
+  width: 33%;
+  float: right;
+}
+
+/* line 59, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#scores {
+  float: left;
+  width: 96.5%;
+}
+/* line 62, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#scores th {
+  colspan: 2;
+}
+
+/* line 67, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#legend {
+  width: 63%;
+  float: left;
+  height: 320px;
+}
+
+/* line 73, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+.one-game {
+  margin: 3px;
+  float: left;
+  width: 95%;
+}
+
+/* line 79, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+.one-game:hover {
+  background-color: white;
+}
+
+/* line 83, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+.one-upcoming {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid gray;
+}
+
+/* line 88, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#schedule th {
+  text-align: left;
+}
+
+/* line 92, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+.one-upcoming:hover {
+  border: 2px solid red;
+  background-color: white;
+}
+
+/* line 97, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+.one-game table {
+  width: 95%;
+  margin: auto;
+}
+
+/* line 102, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#scores .one-days-games {
+  width: 48%;
+  float: left;
+  border: 1px solid gray;
+  margin: 3px;
+}
+
+/* line 110, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+.one-days-games tr td {
+  width: 32px;
+}
+
+/* line 115, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#schedule {
+  float: left;
+}
+/* line 117, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#schedule a {
+  text-decoration: none;
+}
+
+/* line 122, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#schedule td {
+  width: 65px;
+}
+
+/* line 126, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#team-list {
+  padding: 0px;
+  list-style-type: none;
+}
+/* line 129, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#team-list span {
+  width: 40px;
+  float: left;
+}
+
+/* line 135, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+.individual-team a {
+  text-decoration: none;
+  decoration: none;
+}
+
+/* line 140, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 145, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+a {
+  color: inherit;
+}
+
+/* line 149, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+thead td {
+  color: black;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+/* line 155, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+.date-column {
+  padding-right: 20px;
+}
+
+/* line 159, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#one-teams-games {
+  width: 30%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* line 165, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#one-teams-games table {
+  margin: auto;
+}
+
+/* line 169, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#one-teams-stats table {
+  margin: auto;
+  padding-top: 30px;
+}
+/* line 172, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#one-teams-stats table th, #one-teams-stats table td {
+  padding: 0px 20px;
+  text-align: center;
+}
+/* line 176, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#one-teams-stats table td {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* line 181, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
+#team-heading {
+  text-align: center;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Playball);
+
+#main-title{
+  vertical-align:absbottom;
+  display:inline;
+}
+
+#wrapper{
+  background-image: url(baseball-field.jpg);
+  background-repeat: no-repeat;
+  background-size: 128%;
+  background-position: center;
+}
+
+#main-title a {
+  text-decoration: none;
+}
+
+.fancy a {
+  font-family: 'Playball', cursive;
+  font-size: 250%;
+  font-weight: bold;
+}
+
+#nav-bar{
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  background-color: rgba(255,255,255,.8);
+}
+
+#center-bar{
+  width: 40%;
+  margin: auto;
+}
+
+.menu-item {
+  width: 25%;
+  float: left;
+}
+
+.clear {
+  clear:both;
+}
