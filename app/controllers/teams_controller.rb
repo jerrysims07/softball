@@ -1,8 +1,7 @@
 class TeamsController < ApplicationController
 
   def index
-    @teams = Team.all.sort_by(&:pct)
-    @teams.reverse!
+    @teams = Team.all.sort_by(&:pct).reverse!
 
     @scores = Game.where.not(away_team_runs: nil).sort_by(&:date)
     @past_dates = []
@@ -12,7 +11,6 @@ class TeamsController < ApplicationController
     @past_dates.uniq!
 
     @upcoming_games = Game.where(away_team_runs: nil).sort_by(&:date)
-
     @dates = []
     @upcoming_games.each do |g|
       @dates << g.date.beginning_of_day
