@@ -5,12 +5,5 @@ env:
   - DB=sqlite
 script:
   - RAILS_ENV=test bundle exec rake --trace db:migrate test
-addons:
-  postgresql: "9.3"
-before_script:
-  - cp config/database.yml.example config/database.yml
-  - cp config/application.travis.yml config/application.yml
-  - psql -c 'create database softball_test;' -U postgres
-  - psql -U postgres -q -d softball_test -f db/structure.sql
 
 script: 'REPORT_COVERAGE=true bundle exec rake'
