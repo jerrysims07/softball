@@ -4,4 +4,5 @@ rvm:
 env:
   - DB=sqlite
 script:
+  - bin/rake db:migrate RAILS_ENV=test
   - REPORT_COVERAGE=true bundle exec rake
