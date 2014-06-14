@@ -38,6 +38,7 @@ end
 group :test do
   gem 'capybara', '2.1.0'
   gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
 end
 
 group :production do
