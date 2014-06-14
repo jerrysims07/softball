@@ -49,4 +49,7 @@ class GamesController < ApplicationController
     end
   end
 
+  def tourney
+    
+  end
 end

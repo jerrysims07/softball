@@ -144,7 +144,7 @@ body {
 }
 
 /* line 115, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
-#schedule {
+#schedule, #tournament-button{
   float: left;
 }
 /* line 117, /Users/jerry/Code/softball/app/assets/stylesheets/teams.css.scss */
