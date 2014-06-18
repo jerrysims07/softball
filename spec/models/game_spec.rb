@@ -2,9 +2,17 @@ require 'spec_helper'
 
 describe Game do
 
-  it "returns correct class name for new Game" do
-    game = Game.new
-    game.class.should eq(Game)
+  context "that has not been played" do
+
+    it "returns correct class name" do
+      game = Game.new
+      game.class.should eq(Game)
+    end
+
+    it "returns status of 'not played'" do
+      game = Game.new
+      game.status.should eq(:scheduled)
+    end
   end
 
   context "that has been played" do

@@ -5,4 +5,8 @@
   def teams
     [home_team.name, away_team.name]
   end
+
+  def status
+    home_team_runs.nil? && away_team_runs.nil? ? :scheduled : :played
+  end
 end
