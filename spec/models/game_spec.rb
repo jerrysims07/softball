@@ -13,6 +13,13 @@ describe Game do
       game = Game.new
       game.status.should eq(:scheduled)
     end
+
+    context "with same home & away team" do
+      it "will not save" do
+        game = Game.new(id: 1, away_team_id: 1, home_team_id: 1)
+        game.valid?.should eq(false)
+      end
+    end
   end
 
   context "that has been played" do
