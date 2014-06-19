@@ -3,7 +3,7 @@ Feature: Drawing tournament bracket
   I want to draw a bracket on its own page
 
   Scenario: Press the tournament button
-    Given I visit "/"
-    And I click "tournament-button"
     Given I am logged in
+    And   I visit "/"
+    And I click "tournament-button"
     Then I should see "Tournament Schedule"
