@@ -36,4 +36,10 @@ class Team < ActiveRecord::Base
     wins + losses + ties
   end
 
+  def seed
+    unless games_played.nil?
+      Hash[Team.all.sort_by(&:pct).reverse.map.with_index(1).to_a][self]
+    end
+  end
+
 end

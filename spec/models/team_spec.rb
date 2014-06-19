@@ -35,6 +35,31 @@ describe Team do
     it "return 0 games played" do
       @team.games_played.should eq(0)
     end
+
+    it "should not return a seed" do
+      @team.seed.should eq(nil)
+    end
   end
 
+  context "which has played games" do
+    it "should return a seed" do
+      t1 = Team.create
+      t2 = Team.create
+      Game.create(home_team_id: t1.id, away_team_id: t2.id, home_team_runs: 10, away_team_runs: 5)
+      t1.seed.should eq(1)
+      t2.seed.should eq(2)
+    end
+
+    it "returns a seed with more than 2 teams" do
+      t1 = Team.create
+      t2 = Team.create
+      t3 = Team.create
+      Game.create(home_team_id: t1.id, away_team_id: t2.id, home_team_runs: 10, away_team_runs: 5)
+      Game.create(home_team_id: t1.id, away_team_id: t3.id, home_team_runs: 10, away_team_runs: 5)
+      Game.create(home_team_id: t2.id, away_team_id: t3.id, home_team_runs: 10, away_team_runs: 5)
+      t1.seed.should eq(1)
+      t2.seed.should eq(2)
+      t3.seed.should eq(3)
+    end
+  end
 end
