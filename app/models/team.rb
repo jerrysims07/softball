@@ -38,8 +38,13 @@ class Team < ActiveRecord::Base
 
   def seed
     unless games_played.nil?
-      Hash[Team.all.sort_by(&:pct).reverse.map.with_index(1).to_a][self]
+      build_seed Hash[Team.all.sort_by(&:pct).reverse.map.with_index(1).to_a], self
     end
+  end
+
+  private
+  def build_seed(standings, team)
+    standings[team]
   end
 
 end
