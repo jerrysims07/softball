@@ -6,7 +6,7 @@ class TeamsController < ApplicationController
     @scores = Game.where.not(away_team_runs: nil).sort_by(&:date)
     @past_dates = []
     @scores.each do |s|
-      @past_dates << s.date
+      @past_dates << s.date.beginning_of_day
     end
     @past_dates.uniq!
 
