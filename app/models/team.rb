@@ -37,14 +37,33 @@ class Team < ActiveRecord::Base
   end
 
   def seed
-    unless games_played.nil?
-      build_seed Hash[Team.all.sort_by(&:pct).reverse.map.with_index(1).to_a], self
+    unless games_played == 0
+      build_seed
     end
   end
 
   private
-  def build_seed(standings, team)
-    standings[team]
+  def build_seed
+    standings = Team.all.sort_by(&:pct).reverse.to_a
+    standings.length.times do |i|
+      if(i + 1 != standings.length && standings[i].pct == standings[i+1].pct)
+        if need_to_flip? [standings[i], standings[i+1]]
+          standings.insert(i, standings.delete_at(i+1))
+        end
+      end
+    end
+    standings.find_index(self).to_i + 1
   end
 
+  def need_to_flip?(teams)
+    games = Game.where("away_team_id = ? OR home_team_id = ?", teams[0].id, teams[0].id)
+                .where("away_team_id = ? OR home_team_id = ?", teams[1].id, teams[1].id).to_a
+    if games[0].winner == teams[0]
+      false
+    elsif games[0].winner == teams[1]
+      true
+    else
+      "Something went horribly wrong"
+    end
+  end
 end

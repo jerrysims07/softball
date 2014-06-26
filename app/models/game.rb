@@ -18,4 +18,24 @@ class Game < ActiveRecord::Base
       errors.add(:home_team_id, "cannot equal away_team_id")
     end
   end
+
+  def winner
+    if home_team_runs > away_team_runs
+      home_team
+    elsif away_team_runs > home_team_runs
+      away_team
+    else
+      nil
+    end
+  end
+
+  def loser
+    if home_team_runs < away_team_runs
+      home_team
+    elsif away_team_runs < home_team_runs
+      away_team
+    else
+      nil
+    end
+  end
 end
