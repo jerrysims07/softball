@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'minitest'
-gem 'coveralls', require: false
+# gem 'coveralls', require: false
 
 
 group :development, :test do
