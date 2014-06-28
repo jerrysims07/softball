@@ -20,6 +20,7 @@ class Game < ActiveRecord::Base
   end
 
   def winner
+    return nil if status == :scheduled
     if home_team_runs > away_team_runs
       home_team
     elsif away_team_runs > home_team_runs

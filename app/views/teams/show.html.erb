@@ -1,30 +1,33 @@
-<h1 id= "team-heading"><%= @team.name %> (
-  <%= @team.wins %>-
-  <%= @team.losses %>
-  <% unless @team.ties==0 %>
-    -<%= @team.ties %>
-  <% end %>
-   )
-</h1>
-</h1>
-<div id="one-teams-games" class="content-section">
-  <table>
-    <% @team.games.each do |game| %>
-      <tr>
-        <td class="date-column"><%= game.date.strftime("%m/%d") %></td>
-        <td><%= game.away_team.abbr %></td><td> <%= game.away_team_runs%>,</td>
-        <td><%= game.home_team.abbr %></td><td> <%= game.home_team_runs%> </td>
-      </tr>
+<div class ="content-section">
+  <h1 id= "team-heading"><%= @team.name %> (
+    <%= @team.wins %>-
+    <%= @team.losses %>
+    <% unless @team.ties==0 %>
+      -<%= @team.ties %>
     <% end %>
-  </table>
-</div>
+     )
+  </h1>
+  </h1>
+  <h2 id= "seed-listing"> Current Seed: <%= @team.seed %> of <%= @teams.count %></h2>
+  <div id="one-teams-games" class="content-section">
+    <table>
+      <% @team.games.each do |game| %>
+        <tr>
+          <td class="date-column"><%= game.date.strftime("%m/%d") %></td>
+          <td><%= game.away_team.abbr %></td><td> <%= game.away_team_runs%>,</td>
+          <td><%= game.home_team.abbr %></td><td> <%= game.home_team_runs%> </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 
-<div id="one-teams-stats" class="content-section">
-  <table>
-    <tr><th><h2>Runs Scored</h2></th><th><h2>Runs Allowed</h2></th></tr>
-    <tr><td><h1><%= @team.runs[:for] %></h1></td><td><h1><%= @team.runs[:allowed] %></h1></td>
-    <tr><td>ave: <%= @team.runs[:for]/@team.games_played %></td><td>ave: <%= @team.runs[:allowed]/@team.games_played %></td>
-  </table>
+  <div id="one-teams-stats" class="content-section">
+    <table>
+      <tr><th><h2>Runs Scored</h2></th><th><h2>Runs Allowed</h2></th></tr>
+      <tr><td><h1><%= @team.runs[:for] %></h1></td><td><h1><%= @team.runs[:allowed] %></h1></td>
+      <tr><td>ave: <%= @team.runs[:for]/@team.games_played %></td><td>ave: <%= @team.runs[:allowed]/@team.games_played %></td>
+    </table>
+  </div>
 </div>
 <div id="teams-menu">
   <%= form_for :team, url: team_path, html: {method: "get"} do |f| %>
