@@ -14,10 +14,10 @@
                   <tr>
                     <td class = "time"><%= tg.date.strftime("%l:%M %p") %></td>
                   <tr>
-                    <td><%= tg.away_team.abbr %></td>
+                    <td><%= tg.away_team ? tg.away_team.abbr : "" %></td>
                   </tr>
                   <tr>
-                    <td><%= tg.home_team.abbr %></td>
+                    <td><%= tg.home_team ? tg.home_team.abbr : "" %></td>
                   </tr>
                 </table>
               <% end %>
