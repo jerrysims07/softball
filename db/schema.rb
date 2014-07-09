@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140521194941) do
+ActiveRecord::Schema.define(version: 20140707191321) do
 
   create_table "games", force: true do |t|
     t.integer  "home_team_id"
