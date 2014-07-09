@@ -10,349 +10,68 @@
     </tr>
     <tr>
       <td>
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[0]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[0].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[0].away_team ? @tourney_games[0].away_team.abbr : "" %></td>
-                <td><%= @tourney_games[0].away_team ? @tourney_games[0].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[0].home_team ? @tourney_games[0].home_team.abbr : "" %></td>
-                <td><%= @tourney_games[0].home_team ? @tourney_games[0].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[0] %>
       </td>
       <td rowspan="1">
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[4]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[4].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[4].away_team ? @tourney_games[4].away_team.abbr : "W1" %></td>
-                <td><%= @tourney_games[4].away_team ? @tourney_games[4].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[4].home_team ? @tourney_games[4].home_team.abbr : "" %></td>
-                <td><%= @tourney_games[4].home_team ? @tourney_games[4].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[4] %>
       </td>
       <td rowspan="2">
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[8]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[8].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[8].away_team ? @tourney_games[8].away_team.abbr : "W5" %></td>
-                <td><%= @tourney_games[8].away_team ? @tourney_games[8].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[8].home_team ? @tourney_games[8].home_team.abbr : "W2" %></td>
-                <td><%= @tourney_games[8].home_team ? @tourney_games[8].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[8] %>
       </td>
       <td rowspan="4">
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[11]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[11].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[11].away_team ? @tourney_games[11].away_team.abbr : "W9" %></td>
-                <td><%= @tourney_games[11].away_team ? @tourney_games[11].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[11].home_team ? @tourney_games[11].home_team.abbr : "W8" %></td>
-                <td><%= @tourney_games[11].home_team ? @tourney_games[11].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[11] %>
       </td>
       <td rowspan="6">
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[15]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[15].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[15].away_team ? @tourney_games[15].away_team.abbr : "W12" %></td>
-                <td><%= @tourney_games[15].away_team ? @tourney_games[15].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[15].home_team ? @tourney_games[15].home_team.abbr : "W15" %></td>
-                <td><%= @tourney_games[15].home_team ? @tourney_games[15].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[15] %>
+      </td>
+      <td rowspan="6">if necessary =></td>
+      <td rowspan="6">
+        <%= render '/games/one_game', :game => @tourney_games[16] %>
       </td>
     </tr>
     <tr>
       <td rowspan="3"></td>
       <td rowspan="1">
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[1]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[1].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[1].away_team ? @tourney_games[1].away_team.abbr : "" %></td>
-                <td><%= @tourney_games[1].away_team ? @tourney_games[1].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[1].home_team ? @tourney_games[1].home_team.abbr : "" %></td>
-                <td><%= @tourney_games[1].home_team ? @tourney_games[1].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[1] %>
       </td>
     </tr>
     <tr>
       <td rowspan="1">
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[2]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[2].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[2].away_team ? @tourney_games[2].away_team.abbr : "" %></td>
-                <td><%= @tourney_games[2].away_team ? @tourney_games[2].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[2].home_team ? @tourney_games[2].home_team.abbr : "" %></td>
-                <td><%= @tourney_games[2].home_team ? @tourney_games[2].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[2] %>
       </td>
       <td rowspan="2">
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[7]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[7].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[7].away_team ? @tourney_games[7].away_team.abbr : "W3" %></td>
-                <td><%= @tourney_games[7].away_team ? @tourney_games[7].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[7].home_team ? @tourney_games[7].home_team.abbr : "W4" %></td>
-                <td><%= @tourney_games[7].home_team ? @tourney_games[7].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[7] %>
       </td>
     </tr>
     <tr>
       <td rowspan="1">
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[3]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[3].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[3].away_team ? @tourney_games[3].away_team.abbr : "" %></td>
-                <td><%= @tourney_games[3].away_team ? @tourney_games[3].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[3].home_team ? @tourney_games[3].home_team.abbr : "" %></td>
-                <td><%= @tourney_games[3].home_team ? @tourney_games[3].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[3] %>
       </td>
     </tr>
     <tr>
       <td>
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[5]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[5].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[5].away_team ? @tourney_games[5].away_team.abbr : "L1" %></td>
-                <td><%= @tourney_games[5].away_team ? @tourney_games[5].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[5].home_team ? @tourney_games[5].home_team.abbr : "L2" %></td>
-                <td><%= @tourney_games[5].home_team ? @tourney_games[5].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[5] %>
       </td>
       <td>
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[9]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[9].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[9].away_team ? @tourney_games[9].away_team.abbr : "L8" %></td>
-                <td><%= @tourney_games[9].away_team ? @tourney_games[9].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[9].home_team ? @tourney_games[9].home_team.abbr : "W6" %></td>
-                <td><%= @tourney_games[9].home_team ? @tourney_games[9].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[9] %>
       </td>
       <td>
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[13]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[13].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[13].away_team ? @tourney_games[13].away_team.abbr : "W10" %></td>
-                <td><%= @tourney_games[13].away_team ? @tourney_games[13].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[13].home_team ? @tourney_games[13].home_team.abbr : "L12" %></td>
-                <td><%= @tourney_games[13].home_team ? @tourney_games[13].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[13] %>
       </td>
       <td rowspan="2">
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[14]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[14].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[14].away_team ? @tourney_games[14].away_team.abbr : "W14" %></td>
-                <td><%= @tourney_games[14].away_team ? @tourney_games[14].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[14].home_team ? @tourney_games[14].home_team.abbr : "W13" %></td>
-                <td><%= @tourney_games[14].home_team ? @tourney_games[14].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[14] %>
       </td>
     </tr>
     <tr>
       <td>
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[6]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[6].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[6].away_team ? @tourney_games[6].away_team.abbr : "L3" %></td>
-                <td><%= @tourney_games[6].away_team ? @tourney_games[6].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[6].home_team ? @tourney_games[6].home_team.abbr : "L4" %></td>
-                <td><%= @tourney_games[6].home_team ? @tourney_games[6].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[6] %>
       </td>
       <td>
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[10]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[10].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[10].away_team ? @tourney_games[10].away_team.abbr : "L5" %></td>
-                <td><%= @tourney_games[10].away_team ? @tourney_games[10].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[10].home_team ? @tourney_games[10].home_team.abbr : "W7" %></td>
-                <td><%= @tourney_games[10].home_team ? @tourney_games[10].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[10] %>
       </td>
       <td>
-        <div class="one-game">
-          <%= link_to edit_game_path(@tourney_games[13]) do %>
-            <table>
-              <th>
-                Game #<%= @tourney_games[13].tourney_game_number %>
-              </th>
-              <tr>
-                <td><%= @tourney_games[13].away_team ? @tourney_games[13].away_team.abbr : "W11" %></td>
-                <td><%= @tourney_games[13].away_team ? @tourney_games[13].away_team_runs : "" %></td>
-              </tr>
-              <tr>
-                <td><%= @tourney_games[13].home_team ? @tourney_games[13].home_team.abbr : "L9" %></td>
-                <td><%= @tourney_games[13].home_team ? @tourney_games[13].home_team_runs : "" %></td>
-              </tr>
-            </table>
-          <% end %>
-        </div>
+        <%= render '/games/one_game', :game => @tourney_games[13] %>
       </td>
     </tr>
   </table>
 </div>
-
-<!-- <h1> Tournament schedule is still being built. Please check back once the tournament schedule has been finalized.</h1>
-
-<div id= "bracket" class = "content-section tourney" >
-  Tournament Schedule:
-  <div class = "tournament-round" id="main-round-one">
-    <div class="one-upcoming">
-    </div>
-    <div class="one-upcoming">
-    </div>
-    <div class="one-upcoming">
-    </div>
-    <div class="one-upcoming">
-    </div>
-  </div>
-
-<div class = "tournament-round" id="main-round-two">
-  <div class="one-upcoming">
-  </div>
-  <div class="one-upcoming">
-  </div>
-</div>
-
-<div class = "tournament-round" id="main-round-two">
-  <div class="one-upcoming">
-  </div>
-</div>
-
-</div> -->

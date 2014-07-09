@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707191321) do
+ActiveRecord::Schema.define(version: 20140709143647) do
 
   create_table "games", force: true do |t|
     t.integer  "home_team_id"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20140707191321) do
     t.datetime "updated_at"
     t.string   "game_type"
     t.integer  "tourney_game_number"
+    t.string   "scheduled_home"
+    t.string   "scheduled_away"
   end
 
   create_table "teams", force: true do |t|
