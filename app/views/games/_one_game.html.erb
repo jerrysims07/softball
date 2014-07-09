@@ -1,0 +1,32 @@
+<div class="one-game">
+  <%= link_to edit_game_path(game) do %>
+    <table>
+      <th>
+        Game #<%= game.tourney_game_number %>
+      </th>
+      <tr>
+        <td class = "time"><%= game.date.strftime("%m/%d - %l:%M") %></td>
+      </tr>
+      <tr>
+        <% if game.away_team %>
+          <td><%= game.away_team.abbr %>
+        <% else %>
+          <td class="scheduled-team"><%= game.scheduled_away %>
+        <% end %>
+
+        <!-- <td><%= game.away_team ? game.away_team.abbr : game.scheduled_away %></td> -->
+        <td><%= game.away_team ? game.away_team_runs : "" %></td>
+      </tr>
+      <tr>
+        <% if game.home_team %>
+          <td><%= game.home_team.abbr %>
+        <% else %>
+          <td class="scheduled-team"><%= game.scheduled_home %>
+        <% end %>
+
+        <!-- <td><%= game.home_team ? game.home_team.abbr : game.scheduled_home %></td> -->
+        <td><%= game.home_team ? game.home_team_runs : "" %></td>
+      </tr>
+    </table>
+  <% end %>
+</div>
