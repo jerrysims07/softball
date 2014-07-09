@@ -50,6 +50,6 @@ class GamesController < ApplicationController
   end
 
   def tourney
-    @tourney_games = Game.where("game_type = 'tourney'")
+    @tourney_games = Game.where("game_type = 'tourney'").sort_by(&:tourney_game_number)
   end
 end
