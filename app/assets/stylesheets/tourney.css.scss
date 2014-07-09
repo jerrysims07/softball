@@ -11,10 +11,9 @@
 }
 
 .tourney{
-  width: 1200px;
-  height: 580px;
+  width: 800px;
+  height: 100%;
   position: relative;
-  left: -300px;
 }
 
 #bracket .one-game{
@@ -29,4 +28,9 @@
 
 #bracket .one-game{
   border: 1px dashed gray;
+}
+
+.scheduled-team{
+  color: red;
+  font-style: italic;
 }
