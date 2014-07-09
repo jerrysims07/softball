@@ -50,6 +50,6 @@ class GamesController < ApplicationController
   end
 
   def tourney
-    
+    @tourney_games = Game.where("game_type = 'tourney'")
   end
 end

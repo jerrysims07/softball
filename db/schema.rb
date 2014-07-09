@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20140521194941) do
     t.datetime "date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "game_type"
+    t.integer  "tourney_game_number"
   end
 
   create_table "teams", force: true do |t|

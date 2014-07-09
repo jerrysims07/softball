@@ -10,7 +10,7 @@ class TeamsController < ApplicationController
     end
     @past_dates.uniq!
 
-    @upcoming_games = Game.where(away_team_runs: nil).sort_by(&:date)
+    @upcoming_games = Game.where(away_team_runs: nil, game_type: 'regular').sort_by(&:date)
     @dates = []
     @upcoming_games.each do |g|
       @dates << g.date.beginning_of_day

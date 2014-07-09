@@ -1,4 +1,54 @@
 .tourney .one-upcoming{
   width: 65px;
   height: 67px;
+  margin: 5px;
 }
+
+.tourney .tournament-round{
+  width: 75px;
+  height: 319px;
+  float: left;
+}
+
+.tourney{
+  width: 1200px;
+  height: 580px;
+  position: relative;
+  left: -300px;
+}
+
+#bracket .one-game{
+  width: 100px;
+}
+
+#main-round-two .one-upcoming{
+  position: relative;
+  margin: 43px 5px 81px 5px;
+
+}
+
+#bracket .one-game{
+  border: 1px dashed gray;
+}
+//
+// table.bracket {
+//     border-collapse: collapse;
+//     border: none;
+// }
+//
+// .bracket td {
+//     vertical-align: middle;
+//     width: 40em;
+//     margin: 0;
+//     padding: 10px;
+// }
+//
+// .bracket td p {
+//     border-bottom: solid 1px black;
+//     margin: 0;
+//     padding: 5px 5px 5px 5px;
+// }
+//
+// .bracket th{
+//     text-align:center;
+// }
