@@ -3,7 +3,7 @@ class TeamsController < ApplicationController
   def index
     @teams = Team.all.sort_by(&:pct).reverse!
 
-    @scores = Game.where.not(away_team_runs: nil).sort_by(&:date)
+    @scores = Game.where("away_team_runs is not null and game_type = 'regular'").sort_by(&:date)
     @past_dates = []
     @scores.each do |s|
       @past_dates << s.date.beginning_of_day

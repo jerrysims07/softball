@@ -41,11 +41,11 @@ describe Team do
     end
   end
 
-  context "which has played games" do
+  context "which has played regular-season games" do
     it "should return a seed" do
       t1 = Team.create
       t2 = Team.create
-      Game.create(home_team_id: t1.id, away_team_id: t2.id, home_team_runs: 10, away_team_runs: 5)
+      Game.create(home_team_id: t1.id, away_team_id: t2.id, home_team_runs: 10, away_team_runs: 5, game_type: 'regular')
       t1.seed.should eq(1)
       t2.seed.should eq(2)
     end
@@ -54,9 +54,9 @@ describe Team do
       t1 = Team.create
       t2 = Team.create
       t3 = Team.create
-      Game.create(home_team_id: t1.id, away_team_id: t2.id, home_team_runs: 10, away_team_runs: 5)
-      Game.create(home_team_id: t1.id, away_team_id: t3.id, home_team_runs: 10, away_team_runs: 5)
-      Game.create(home_team_id: t2.id, away_team_id: t3.id, home_team_runs: 10, away_team_runs: 5)
+      Game.create(home_team_id: t1.id, away_team_id: t2.id, home_team_runs: 10, away_team_runs: 5, game_type: 'regular')
+      Game.create(home_team_id: t1.id, away_team_id: t3.id, home_team_runs: 10, away_team_runs: 5, game_type: 'regular')
+      Game.create(home_team_id: t2.id, away_team_id: t3.id, home_team_runs: 10, away_team_runs: 5, game_type: 'regular')
       t1.seed.should eq(1)
       t2.seed.should eq(2)
       t3.seed.should eq(3)
@@ -67,11 +67,11 @@ describe Team do
       t2 = Team.create
       t3 = Team.create
       t4 = Team.create
-      Game.create(home_team_id: t2.id, away_team_id: t1.id, home_team_runs: 10, away_team_runs: 5)
-      Game.create(home_team_id: t2.id, away_team_id: t3.id, home_team_runs: 10, away_team_runs: 5)
-      Game.create(home_team_id: t4.id, away_team_id: t2.id, home_team_runs: 10, away_team_runs: 5)
-      Game.create(home_team_id: t1.id, away_team_id: t3.id, home_team_runs: 10, away_team_runs: 5)
-      Game.create(home_team_id: t1.id, away_team_id: t4.id, home_team_runs: 10, away_team_runs: 5)
+      Game.create(home_team_id: t2.id, away_team_id: t1.id, home_team_runs: 10, away_team_runs: 5, game_type: 'regular')
+      Game.create(home_team_id: t2.id, away_team_id: t3.id, home_team_runs: 10, away_team_runs: 5, game_type: 'regular')
+      Game.create(home_team_id: t4.id, away_team_id: t2.id, home_team_runs: 10, away_team_runs: 5, game_type: 'regular')
+      Game.create(home_team_id: t1.id, away_team_id: t3.id, home_team_runs: 10, away_team_runs: 5, game_type: 'regular')
+      Game.create(home_team_id: t1.id, away_team_id: t4.id, home_team_runs: 10, away_team_runs: 5, game_type: 'regular')
       t1.seed.should eq(2)
       t2.seed.should eq(1)
       t3.seed.should eq(4)
