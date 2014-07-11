@@ -18,7 +18,7 @@ class Team < ActiveRecord::Base
   end
 
   def pct
-    self.games.nil? ? 0 : self.wins.to_f / (self.wins + self.losses)
+    self.games.nil? ? 0.0 : self.wins.to_f / (self.wins + self.losses)
   end
 
   def runs
