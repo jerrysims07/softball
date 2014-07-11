@@ -41,7 +41,6 @@ class Game < ActiveRecord::Base
     new_game = Game.where(tourney_game_number: loser_next[:game_number]).first
     team = @game.loser
     new_game.update_attributes(loser_next[:home_away] => team)
-    #it appears to exit this method smoothly
   end
 
   def home_team_id_cannot_equal_away_team_id
@@ -51,7 +50,7 @@ class Game < ActiveRecord::Base
   end
 
   def winner
-    # return nil if @game.status == :scheduled
+    return nil if @game.respond_to?(:status) && @game.status == :scheduled
     if home_team_runs > away_team_runs
       home_team
     elsif away_team_runs > home_team_runs
