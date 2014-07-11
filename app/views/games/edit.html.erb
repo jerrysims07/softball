@@ -7,7 +7,7 @@
     <%= @game.away_team && @game.home_team ? f.select(:away_team_runs, (0..40), :include_blank => true) : ""%><br />
 
     <%= f.label :home_team_runs, @game.home_team ? @game.home_team.abbr : "Team Not Determined" %>:
-    <%= @game.away_team && @game.home_team ? f.select(:away_team_runs, (0..40), :include_blank => true) : ""%><br />
+    <%= @game.away_team && @game.home_team ? f.select(:home_team_runs, (0..40), :include_blank => true) : ""%><br />
 
     <%= f.submit @game.away_team && @game.home_team ? "Update Game" : "Update Date/Time"%>
   </div>

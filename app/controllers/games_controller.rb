@@ -36,16 +36,11 @@ class GamesController < ApplicationController
   end
 
   def update
-    @game = Game.find(params[:id])
-    game_params = params.require(:game).permit(:date, :away_team_runs, :home_team_runs)
-    @game.assign_attributes game_params
-    @game.away_team_runs = params[:game][:away_team_runs] == "" ? nil : params[:game][:away_team_runs]
-    @game.home_team_runs = params[:game][:home_team_runs] == "" ? nil : params[:game][:home_team_runs]
-
-    if @game.save
+    @game = Game.update params
+    if @game.game_type == "regular"
       redirect_to standings_path
-    else
-      redirect_to back
+    elsif @game.game_type == "tourney"
+      redirect_to '/tournament'
     end
   end
 
