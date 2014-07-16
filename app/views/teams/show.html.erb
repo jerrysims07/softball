@@ -11,7 +11,7 @@
   <h2 id= "seed-listing"> Current Seed: <%= @team.seed %> of <%= @teams.count %></h2>
   <div id="one-teams-games" class="content-section">
     <table>
-      <% @team.games.each do |game| %>
+      <% @team.games.select{|g| g.status == :played}.each do |game| %>
         <tr>
           <td class="date-column"><%= game.date.strftime("%m/%d") %></td>
           <td><%= game.away_team.abbr %></td><td> <%= game.away_team_runs%>,</td>

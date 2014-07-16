@@ -56,14 +56,14 @@ class Team < ActiveRecord::Base
   end
 
   def need_to_flip?(teams)
-    games = Game.where("away_team_id = ? OR home_team_id = ?", teams[0].id, teams[0].id)
-                .where("away_team_id = ? OR home_team_id = ?", teams[1].id, teams[1].id).to_a
+    games = Game.where("away_team_id = ? OR home_team_id = ?", teams[0].id, teams[0].id).where("away_team_id = ? OR home_team_id = ?", teams[1].id, teams[1].id)
+
     if games[0].winner == teams[0]
       false
     elsif games[0].winner == teams[1]
       true
     else
-      "Something went horribly wrong"
+      false
     end
   end
 end
