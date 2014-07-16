@@ -10,7 +10,7 @@ class Game < ActiveRecord::Base
   end
 
   def status
-    home_team_runs.nil? && @away_team_runs.nil? ? :scheduled : :played
+    (home_team_runs.nil? && @away_team_runs.nil?)||(home_team.nil? || away_team.nil?) ? :scheduled : :played
   end
 
   def self.update (params)

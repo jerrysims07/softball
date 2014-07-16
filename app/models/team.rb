@@ -25,7 +25,7 @@ class Team < ActiveRecord::Base
     runs = {}
     runs[:for]=0
     runs[:allowed]=0
-    self.games.each do |g|
+    self.games.select{|g| g.status == :played}.each do |g|
       runs[:for]+= self.name == g.home_team.name ? g.home_team_runs.to_i : g.away_team_runs.to_i
       runs[:allowed]+= self.name == g.home_team.name ? g.away_team_runs.to_i : g.home_team_runs.to_i
     end
