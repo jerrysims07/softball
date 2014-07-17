@@ -10,7 +10,10 @@ class Game < ActiveRecord::Base
   end
 
   def status
-    (home_team_runs.nil? && @away_team_runs.nil?)||(home_team.nil? || away_team.nil?) ? :scheduled : :played
+    ( home_team_runs.nil? ||
+      away_team_runs.nil?||
+      home_team.nil? ||
+      away_team.nil?        ) ? :scheduled : :played
   end
 
   def self.update (params)
@@ -50,24 +53,16 @@ class Game < ActiveRecord::Base
   end
 
   def winner
-    return nil if @game.nil?
-    return nil if @game.respond_to?(:status) && @game.status == :scheduled
-    if home_team_runs > away_team_runs
-      home_team
-    elsif away_team_runs > home_team_runs
-      away_team
-    else
-      nil
-    end
+    return nil if status == :scheduled
+    return home_team if home_team_runs > away_team_runs
+    return away_team if away_team_runs > home_team_runs
+    return "tie" if home_team_runs == away_team_runs
   end
 
   def loser
-    if home_team_runs < away_team_runs
-      home_team
-    elsif away_team_runs < home_team_runs
-      away_team
-    else
-      nil
-    end
+    return nil if @game.nil? || @game.status == :scheduled
+    return home_team if home_team_runs < away_team_runs
+    return away_team if away_team_runs < home_team_runs
+    return "tie" if home_team_runs == away_team_runs
   end
 end

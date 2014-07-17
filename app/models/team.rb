@@ -32,6 +32,10 @@ class Team < ActiveRecord::Base
     runs
   end
 
+  def differential
+    runs[:for] - runs[:allowed]
+  end
+
   def games_played
     wins + losses + ties
   end
@@ -44,20 +48,27 @@ class Team < ActiveRecord::Base
 
   private
   def build_seed
-    standings = Team.all.sort_by(&:pct).reverse.to_a
+    standings = build_standings
     standings.length.times do |i|
-      if(i + 1 != standings.length && standings[i].pct == standings[i+1].pct)
+      if(standings[i+1] && standings[i].pct == standings[i+1].pct)
         if need_to_flip? [standings[i], standings[i+1]]
-          standings.insert(i, standings.delete_at(i+1))
+          standings = flip! standings, i
         end
       end
     end
     standings.find_index(self).to_i + 1
   end
 
-  def need_to_flip?(teams)
-    games = Game.where("away_team_id = ? OR home_team_id = ?", teams[0].id, teams[0].id).where("away_team_id = ? OR home_team_id = ?", teams[1].id, teams[1].id)
+  def build_standings
+    Team.all.sort_by(&:pct).reverse
+  end
 
+  def flip!(standings, i)
+    standings.insert(i, standings.delete_at(i+1))
+  end
+
+  def need_to_flip?(teams)
+    games = get_head_to_head teams
     if games[0].winner == teams[0]
       false
     elsif games[0].winner == teams[1]
@@ -65,5 +76,10 @@ class Team < ActiveRecord::Base
     else
       false
     end
+  end
+
+  def get_head_to_head teams
+    Game.where("away_team_id = ? OR home_team_id = ?", teams[0].id, teams[0].id)
+    .where("away_team_id = ? OR home_team_id = ?", teams[1].id, teams[1].id)
   end
 end
